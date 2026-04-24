@@ -33,8 +33,6 @@ This project explores whether CNN architectures can learn discriminative motion 
 
 ## Repository Structure
 
-Recommended structure for this GitHub repository:
-
 ```text
 pseudo-rgb-skeleton-action-recognition/
 │
@@ -45,27 +43,20 @@ pseudo-rgb-skeleton-action-recognition/
 ├── notebooks/
 │   └── action_recognition_experiments.ipynb
 │
-├── src/
-│   └── .gitkeep
-│
-├── reports/
-│   └── figures/
-│       └── .gitkeep
-│
 └── data/
     └── README.md
 ```
 
-The dataset itself should **not** be committed to GitHub if it is large. Keep the `data/` folder local and document where the files should be placed.
+The dataset itself is not committed to GitHub. The `data/README.md` file explains where the dataset should be placed locally.
 
 ---
 
 ## Dataset
 
-The experiments use pseudo-RGB action images from the PKU dataset, organized by camera view:
+The experiments use pseudo-RGB action images from the PKU dataset, organized locally as:
 
 ```text
-Datasets/
+data/Datasets/
 ├── PKU/
 │   ├── ResActionsImagesM/     # Middle / center camera
 │   ├── ResActionsImagesL/     # Left camera
@@ -78,6 +69,8 @@ Datasets/
 │
 └── pku_actions_id.xlsx
 ```
+
+The dataset files are intentionally excluded from the repository because they may be large or externally provided.
 
 The notebook expects the action ID to be embedded in image filenames, for example:
 
@@ -214,6 +207,10 @@ Recommended replacement pattern:
 from pathlib import Path
 
 PROJECT_ROOT = Path.cwd()
+
+if PROJECT_ROOT.name == "notebooks":
+    PROJECT_ROOT = PROJECT_ROOT.parent
+
 DATA_DIR = PROJECT_ROOT / "data" / "Datasets"
 PKU_M_DIR = DATA_DIR / "PKU" / "ResActionsImagesM"
 LABELS_PATH = DATA_DIR / "pku_actions_id.xlsx"
