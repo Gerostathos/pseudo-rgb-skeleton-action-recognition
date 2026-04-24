@@ -156,7 +156,7 @@ The strongest PKU results come from the optimized configurable CNN, while the sm
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/pseudo-rgb-skeleton-action-recognition.git
+git clone https://github.com/Gerostathos/pseudo-rgb-skeleton-action-recognition.git
 cd pseudo-rgb-skeleton-action-recognition
 ```
 
