@@ -1,0 +1,58 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+myenv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Data files - keep datasets local
+/data/
+Datasets/
+*.zip
+*.rar
+*.7z
+
+# Model checkpoints / trained weights
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+models/
+checkpoints/
+
+# Experiment outputs
+runs/
+outputs/
+artifacts/
+wandb/
+mlruns/
+
+# Reports generated locally
+reports/figures/*.png
+reports/figures/*.jpg
+reports/figures/*.jpeg
+reports/figures/*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
