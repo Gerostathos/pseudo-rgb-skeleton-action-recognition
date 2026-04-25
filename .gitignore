@@ -19,8 +19,9 @@ myenv/
 .env
 .env.*
 
-# Data files - keep datasets local
-/data/
+# Data files - keep datasets local, but keep data/README.md
+/data/*
+!/data/README.md
 Datasets/
 *.zip
 *.rar
@@ -32,6 +33,7 @@ Datasets/
 *.pth
 *.ckpt
 *.pkl
+*.pickle
 *.joblib
 models/
 checkpoints/
